@@ -92,10 +92,10 @@ void XuLi(){
     system("pause");
 }
 void HienThi(){
-    // system("cls");
+     system("cls");
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
-            printf("%3d",mt[i][j] );
+            printf("%5d",mt[i][j] );
         }
         printf("\n");
     }
