@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<windows.h>
 #include<string.h>
-#include<string.h>
 #include<conio.h>
 #define MAX 50
 #define KT 256
@@ -21,6 +20,7 @@ int tong=0;
 FILE *f;
 void Nhap(){
     stt=1;
+    tong=0;
 	system("cls"); 
 	f=fopen("SO_LIEU.C","wb");
 	while(1){ 

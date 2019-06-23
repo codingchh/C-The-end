@@ -47,27 +47,32 @@ void NhapDaySo(){
 }
 void Ghep2Day(){
     system("cls");
-    int i,j,k;
-    i=j=k=0;
-    while(k<n1+n2-1){
-        if(a[i]<b[j]){
-            c[k]=a[i];
-            k++;
-            i++;
-        }
-        else{
-            c[k]=b[j];
-            k++;
-            j++;
-        }
-    }
     if(a[n1-1]<b[n2-1])
         c[n1+n2-1]=b[n2-1];
     else
         c[n1+n2-1]=a[n1-1];
     // đoạn if này là do nếu để phần tử cuối cùng so sánh thì i 
-    // của a hoặc jcủa b sẽ vượt quá n1 hoặc n2 làm cho c[n1+n2]= giá trị k xđịnh
-    // nên dòng if(a[i]<b[j]) này sẽ k so sánh đúng :>
+    // của a hoặc j của b sẽ vượt quá n1 hoặc n2 làm cho c[n1+n2]= giá trị k xđịnh
+    // nên dòng if(a[i]<b[j]) dưới này sẽ k so sánh đúng :>
+    int i,j,k;
+    i=j=k=0;
+    while(k<n1+n2-1){
+        if(a[i]<b[j]){
+            c[k]=a[i]; 
+            i++;
+        }
+        else{
+            c[k]=b[j]; 
+            j++;
+        }
+        k++;
+    	if(i==n1){
+    		a[n1]=b[n2-1];
+    	}//nếu i vượt quá số ptử của arr a thì cho a[n1]=b[max]
+    	else if(j==n2){
+    		b[n2]=a[n1-1];
+    	}//nếu j vượt quá số ptử của arr b thì cho b[n2]=a[max]
+    }
     printf("%s\n", "Da ghep hai day thanh cong ");
     system("pause");
 }
@@ -89,3 +94,4 @@ void In(){
     system("pause");
 }
 // Hoang Huy
+
